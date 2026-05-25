@@ -60,6 +60,10 @@ section{
     font-family: var(--fonte3);
 }
 
+section > p{
+    padding-bottom: 2em;
+}
+
 section.normal{
     background-color: var(--cor5);
     color: black;
@@ -68,13 +72,28 @@ section.normal{
 section.imagem{
     background-color: var(--cor2);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.466);
+    background-size: cover;
+    background-attachment: fixed;
+    /*Esse FIXED junto com todos os outros comandos da o Efeito Paralaxe*/
 }
 
 section.imagem > p{
     width: 400px;
     /*display: inline-block;*/
     padding: 5px;
-    background-color: #4b2e1e63; /*Cor --cor1*/
+    background-color: #4b2e1e00; /*Cor --cor1*/
+    text-shadow: 2px 2px 0px black;
+}
+
+section#img01{
+    background-image: url('../imagens/background003.jpg');
+    background-position: center center;
+}
+
+section#img02{
+    background-image: url('../imagens/background004.jpg');
+    background-position: center center;
 }
 
 footer{
