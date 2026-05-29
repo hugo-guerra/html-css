@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+<!--O atributo METHOD na tag <form> serve para definir como os dados do formulário serão enviados.
+Os dois valores principais são: (GET e POST)-->
+
+<!--O GET (Padrão)envia os dados pela URL, dando para o usuario ver pela propria URL.-->
+<!--Quando usar GET: Quando os Dados que estiver pedindo não forem sensíveis
+limitado a 3000 byte-->
+
+<!--O POST envia os dados “escondidos” no corpo da requisição, mas ainda não é seguro
+fazendo qualquer pessoa com um pouco mais de conhecimento podendo ver, mas só não aparecendo na URL.-->
+<!--Quando usar o POST: Dados sensíveis, tomando cuidado, pois o melhor é trabalhar com o protocolo HTTPS,
+e se você quiser que seus Dados não apareçam na URL, se tiver mais de 300 byte e precisar enviar aquivos-->
+<form action="cadastro.php" method="post" autocomplete="off">
+    <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+
+    <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+    
+    <p><input type="submit" value="Enviar"></p>
+</form>
+
+</body>
+</html>
