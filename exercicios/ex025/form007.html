@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de FOrmulário</h1>
+<form action="cadastro.php" method="post" autocomplete="on">
+    <p>
+        <label for="iest">Estado: </label>
+        <select name="estado" id="iest">
+<!--A tag <select> Cria uma lista suspensa (dropdown) de opções. -->
+                <option value="" selected>--- Escolha ---</option>
+<!--SELECTED para a opção já vim selecionada por padrão-->
+            <optgroup label="Região Sudeste">
+<!--A tag <optgroup> Agrupa opções dentro de um <select>.-->
+                <option value="MG">Minas Gerais</option>
+<!--A tag <option> Define uma opção dentro de um <select> ou <datalist>.-->
+                <option value="RJ">Rio de janeito</option>
+                <option value="SP">São Paulo</option>
+            </optgroup>
+<!--A diferença entre SELECT e DATALIST é que se não tiver a opção,-->
+<!--na DATALIST o Usuario pode escrever-->
+            <optgroup label="Região Sul">
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+            </optgroup>
+        </select>
+    </p>
+    <p>
+        <label for="iprof">Profissão: </label>
+        <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist id="lstprof">
+<!--A tag <datalist> Cria uma lista de sugestões para um campo <input>.-->
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+            <option value="CONT">Contador</option>
+            <option value="ADM">Administrador</option>
+        </datalist>
+    </p>
+    <p>
+        <label for="imsg">Mensagem: </label> <br>
+        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</form>
+</body>
+</html>
