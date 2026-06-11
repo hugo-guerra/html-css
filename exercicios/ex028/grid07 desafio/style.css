@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
 .conteiner{
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: (12, 1fr);
